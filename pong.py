@@ -90,4 +90,13 @@ while True:
         ball.sety(-290)
         ball.dy *= -1
 
+    # Left and right
+    if ball.xcor() > 350:
+        ball.goto(0, 0)
+        ball.dx *= -1
+
+    if ball.xcor() < -350:
+        ball.goto(0, 0)
+        ball.dx *= -1
+
     # =======  Border checking end  =======
