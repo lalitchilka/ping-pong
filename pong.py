@@ -34,6 +34,27 @@ ball.goto(0, 0)
 ball.dx = 2
 ball.dy = 2;
 
+# =======  Functions start  =======
+
+# Move Paddle A up
+def paddle_a_up():
+    y = paddle_a.ycor()
+    y += 20
+    paddle_a.sety(y)
+
+# Move Paddle B up
+def paddle_b_up():
+    y = paddle_b.ycor()
+    y += 20
+    paddle_b.sety(y)
+
+# =======  Functions end  =======
+
+# Key Bindings
+wn.listen()
+wn.onkeypress(paddle_a_up, "w")
+wn.onkeypress(paddle_b_up, "Up")
+
 # Main game loop
 while True:
     wn.update()
