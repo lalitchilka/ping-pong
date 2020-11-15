@@ -4,7 +4,9 @@ wn = turtle.Screen()
 wn.title("Pong")
 wn.bgcolor("black")
 wn.setup(width=800, height=600)
-wn.tracer(0)
+# wn.tracer(2, 30)
+# screen.delay(30)
+wn.tracer(0, 0)
 
 # Paddle A
 paddle_a = turtle.Turtle()
@@ -72,3 +74,7 @@ wn.onkeypress(paddle_b_down, "Down")
 # Main game loop
 while True:
     wn.update()
+
+    # Move the ball
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
